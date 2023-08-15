@@ -25,7 +25,7 @@ class Env:
     vm_priority: Optional[str] = os.environ.get(
         "AML_CLUSTER_PRIORITY", "lowpriority"
     )  # NOQA: E501
-    min_nodes: int = int(os.environ.get("AML_CLUSTER_MIN_NODES", 0))
+    min_nodes: int = int(os.environ.get("AML_CLUSTER_MIN_NODES", 1))
     max_nodes: int = int(os.environ.get("AML_CLUSTER_MAX_NODES", 2))
     build_id: Optional[str] = os.environ.get("BUILD_BUILDID")
     pipeline_name: Optional[str] = os.environ.get("TRAINING_PIPELINE_NAME")
